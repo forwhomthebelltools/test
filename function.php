@@ -43,8 +43,25 @@ function findLinks($site1, $site2)
 
 $links = findLinks($first, $second);
 
-echo gettype($links);
 
+//simply print all links scraped from urls
+function printLinks($array) {
+	echo "<br>List of first array:" . "<br>";
+	echo "---------------------------". "<br>";
+	foreach ($array[0] as $links1) {
+		echo $links1 . "<br>";
+	}
 
+	echo "<br>";
+	echo "<br>";
+	echo "List of second array:" . "<br>";
+	echo "---------------------------"."<br>";
+	foreach ($array[1] as $links2) {
+		echo $links2 . "<br>";
+	}	
+}
+
+$printedLinks = printLinks($links);
+echo $printedLinks;
 
 ?>
